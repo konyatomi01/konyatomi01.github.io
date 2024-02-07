@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,15 +11,15 @@
     <title>Tomi weboldala</title>
 </head>
 <body>
-    <div>
-        <div class="xd">
-            <h1 class="text">Eljönnél velem randizni?</h1>
-        <img src="kep.jpg" alt="" class="kep">
-        </div>
-        <div class="xd2">
-            <button class="jogomb" @click="fun">Igen</button>
-        <button class="rosszgomb">Nem</button>
-        </div>
+    <div class="xd3">
+        <div>
+            
+            <div class="xd2">
+                <h1 class="text">Eljönnél velem randizni?</h1>
+                <button class="jogomb" @click="fun">Igen</button>
+            <button class="rosszgomb">Nem</button>
+            </div>
+    </div>
 
     </div>
 </body>
@@ -37,9 +38,14 @@
 .xd2 {
     display: flex;
     width: 100vw;
+    flex-direction: column;
     
-    justify-content: center;
-    align-items: flex-start; 
+    justify-content: flex-start;
+    align-items: center; 
+}
+.xd3 {
+    width: 100vw;
+    height: 100vh;
 }
 .text {
     font-size: 10vh;
@@ -49,8 +55,8 @@
 .jogomb {
     color: white;
     background: green;
-    height: 15vh;
-    width: 20vw;
+    height: 10vh;
+    width: 35vw;
     font-size: 7vh;
     margin: 2vh;
     display: inline-flex;
@@ -60,8 +66,8 @@
 .rosszgomb {
     color: white;
     background: red;
-    height: 15vh;
-    width: 20vw;
+    height: 10vh;
+    width: 35vw;
     font-size: 7vh;
     margin: 2vh;
     display: inline-flex;
