@@ -13,10 +13,7 @@
     <div class="xd3">
         <div class="xd">
             <img src="kep2.jpg" alt="" class="kep">
-            <div class="kozep">
-                <h1 class="text">Szupi</h1>
-                <button class="tovabb" @click="fun">👉Gomb👈</button>
-            </div>
+            <h1 class="text">Szupi</h1>
             <img src="kep2.jpg" alt="" class="kep">
         </div>
     </div>
@@ -28,13 +25,9 @@
     font-family: 'Protest Riot';
     color: blueviolet;
     margin: 3vw;
-    text-align: center;
 }
 .kep {
     width: 60vw;
-}
-.kozep {
-    text-align: center;
 }
 
 .xd3 {
@@ -51,14 +44,6 @@
     align-items: center;
 }
 }
-.tovabb {
-    color: white;
-    background: blueviolet;
-    height: 10vh;
-    font-size: 7vh;
-    margin: 2vh;
-    text-wrap: nowrap;
-}
 
 
 @media screen and (orientation:portrait) {
@@ -72,10 +57,3 @@
 }
 }
 </style>
-
-<script>
-const tovabb = document.querySelector(".tovabb") 
-
-tovabb.addEventListener('click', () => {
-    window.location.href = "https://m.me/tomikaxdd";})
-</script>
