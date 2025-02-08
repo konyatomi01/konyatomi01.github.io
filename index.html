@@ -82,6 +82,12 @@ const jogomb = document.querySelector(".jogomb")
 const rossz = document.querySelector(".rosszgomb")
 
 rossz.addEventListener('click', () => {
+    fetch('https://script.google.com/macros/s/AKfycbyUte_2G7ICmVPKv7zIuE4L4h7ps66aUJxPqaBl34HNqa03K-vMbuurKmYkVz_-ZHdd/exec', {
+                method: 'POST',
+                body: new URLSearchParams({
+                'answer': 'nem'
+                })
+            });
     const currentWidth = jogomb.offsetWidth/ window.innerWidth * 100;;
     const currentHeight = jogomb.offsetHeight/ window.innerHeight * 100;
     const multiplier = 1.3;
@@ -100,6 +106,12 @@ rossz.addEventListener('click', () => {
 
   });
   jogomb.addEventListener('click', () => {
+    fetch('https://script.google.com/macros/s/AKfycbyUte_2G7ICmVPKv7zIuE4L4h7ps66aUJxPqaBl34HNqa03K-vMbuurKmYkVz_-ZHdd/exec', {
+                method: 'POST',
+                body: new URLSearchParams({
+                'answer': 'igen'
+                })
+            });
     window.open("meno.html", "_self");
 });
 </script>
