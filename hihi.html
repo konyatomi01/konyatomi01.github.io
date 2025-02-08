@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+    <title>Tomi weboldala</title>
+</head>
+<body>
+    <h1 class="text">Eljönnél velem újra randizni?</h1>
+    <button class="jogomb">Igen</button>  <button class="rosszgomb">Nem</button>  <style scoped>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Protest Riot';
+        }
+        .text {
+            font-size: 8vh;
+            color:blue;
+            text-align: center;
+        }
+        .jogomb {
+            color: white;
+            background: green;
+            padding: 2rem;
+            font-size: 7vh;
+            margin: 2vh;
+        }
+        .rosszgomb {
+            color: white;
+            background: red;
+            font-size: 7vh;
+            margin: 2vh;
+            padding: 2rem;
+        }
+    </style>
+
+    <script>
+        const jogomb = document.querySelector(".jogomb");
+        const rossz = document.querySelector(".rosszgomb");
+
+        const rosszListener = () => {
+            fetch('https://script.google.com/macros/s/AKfycbyUte_2G7ICmVPKv7zIuE4L4h7ps66aUJxPqaBl34HNqa03K-vMbuurKmYkVz_-ZHdd/exec', {
+                method: 'POST',
+                body: new URLSearchParams({
+                'answer': 'nem'
+                })
+            });
+            const button = document.createElement('button');
+            button.innerHTML = 'Igen';
+            button.style.position = 'absolute';
+            button.style.top = 20 + Math.random() * 60 + 'vh';
+            button.style.left = Math.random() * 65 + 'vw';
+            button.classList.add('jogomb');
+            button.addEventListener('click', joListener);
+            document.body.appendChild(button);
+        }
+
+        const joListener = () => {
+            fetch('https://script.google.com/macros/s/AKfycbyUte_2G7ICmVPKv7zIuE4L4h7ps66aUJxPqaBl34HNqa03K-vMbuurKmYkVz_-ZHdd/exec', {
+                method: 'POST',
+                body: new URLSearchParams({
+                'answer': 'igen'
+                })
+            });
+            window.open("meno.html", "_self");
+        }
+
+        rossz.addEventListener('click', rosszListener);
+        jogomb.addEventListener('click', joListener);
+    </script>
+</body>
+</html>
