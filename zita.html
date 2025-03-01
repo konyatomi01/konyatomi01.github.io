@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <title>Zita weboldala</title>
+</head>
+<body>
+    <h1 class="text">Mit fogsz ma inni?</h1>
+        <div class="k">
+            <div class="f">
+                <button class="sor1" @click="fun">Vodkalma</button>
+            <button class="sor2">Túrósrétes</button>
+            <button class="sor3">Lame sör</button>
+            </div>
+            <div class="f">
+                <button class="sor1" @click="fun">Vodkalma</button>
+            <button class="sor2">Túrósrétes</button>
+            <button class="sor3">Lame sör</button>
+            </div>
+        </div>
+</body>
+</html>
+<style scoped>
+body {
+
+}
+
+.f {
+    display: flex;
+    flex-direction: column;
+}
+.k {
+    display: flex;
+}
+.kep {
+    width: 10vw;
+}
+
+.text {
+    font-size: 10vh;
+    font-family: "Concert One", sans-serif;
+    color: blueviolet;
+    text-align: center;
+}
+.sor1 {
+    color: black;
+    background: #f5b222;
+    font-size: 50px;
+    margin: 20px;
+    font-family: "Concert One", sans-serif;
+}
+
+.sor2 {
+    color: black;
+    background: #0cd8f7;
+    font-size: 50px;
+    margin: 20px;
+    font-family: "Concert One", sans-serif;
+}
+.sor3 {
+    color: black;
+    background: #f527b7;
+    font-size: 50px;
+    margin: 20px;
+    font-family: "Concert One", sans-serif;
+}
+
+</style>
+<script>
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(a => a.addEventListener('click', () => {
+    window.open("extra.html", "_self");
+  }))
+
+
+</script>
